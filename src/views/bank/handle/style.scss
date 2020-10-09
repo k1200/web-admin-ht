@@ -1,0 +1,86 @@
+.app-container {
+  padding-top: 32px;
+}
+.row_item {
+  font-size: 16px;
+  font-weight: bold;
+}
+.row_body {
+  font-size: 18px;
+}
+.handle_step_groups,
+.step_body {
+  margin-top: 32px;
+}
+.step_body {
+  padding: 0 15px;
+}
+/deep/ .el-steps {
+  align-items: center;
+}
+/deep/ .el-step__line {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/deep/ .el-step__icon {
+  width: auto;
+  height: auto;
+  padding: 4px 15px;
+  cursor: default;
+}
+/deep/ .el-step__icon.is-text {
+  border-radius: 0;
+}
+/deep/ .el-step__head.is-finish,
+.child_step.is-finish {
+  color: $success_color;
+  border-color: $success_color;
+}
+/deep/ .el-step__head.is-process,
+.child_step.is-process {
+  color: $color;
+  border-color: $color;
+}
+.child_step {
+  border: 2px solid;
+  padding: 4px 15px;
+  position: relative;
+}
+.child_step.is-wait {
+  color: $wait_color;
+  border-color: $wait_color;
+}
+.child_step.is-warning {
+  color: $warning_color;
+  border-color: $warning_color;
+}
+.child_step.is-warning::after {
+  content: '';
+  border: 6px solid #f56c6c;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  z-index: 2;
+}
+.child_step + .child_step {
+  margin-top: 15px;
+}
+.el-alert {
+  margin-top: 12px;
+  line-height: unset;
+  padding: 8px;
+}
+.el_alert__warning {
+  color: $color;
+  cursor: pointer;
+}
+/deep/ .el-step__description {
+  position: absolute;
+}
+// /deep/ .el-step__title.is-process,
+// /deep/ .el-step__head.is-process {
+//   transform: scale(1.2);
+// }
